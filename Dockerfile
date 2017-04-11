@@ -48,9 +48,6 @@ RUN apt-get clean all && \
         git             \
         wget            \
         zip             \
-        openjdk-8-jre   \
-        build-essential \
-        pkg-config      \
         python          \
 	python-dev      \
         python-pip      \
