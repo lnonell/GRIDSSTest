@@ -24,13 +24,13 @@ ENV DEBIAN_FRONTEND noninteractive
 ################## BEGIN INSTALLATION ######################
 
 # add apt mirror
-RUN mv /etc/apt/sources.list /etc/apt/sources.list.bkp && \
-    bash -c 'echo -e "deb mirror://mirrors.ubuntu.com/mirrors.txt xenial main restricted universe multiverse\n\
-deb mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates main restricted universe multiverse\n\
-deb mirror://mirrors.ubuntu.com/mirrors.txt xenial-backports main restricted universe multiverse\n\
-deb mirror://mirrors.ubuntu.com/mirrors.txt xenial-security main restricted universe multiverse\n\n" > /etc/apt/sources.list' && \
-    cat /etc/apt/sources.list.bkp >> /etc/apt/sources.list && \
-    cat /etc/apt/sources.list
+#RUN mv /etc/apt/sources.list /etc/apt/sources.list.bkp && \
+#    bash -c 'echo -e "deb mirror://mirrors.ubuntu.com/mirrors.txt xenial main restricted universe multiverse\n\
+#deb mirror://mirrors.ubuntu.com/mirrors.txt xenial-updates main restricted universe multiverse\n\
+#deb mirror://mirrors.ubuntu.com/mirrors.txt xenial-backports main restricted universe multiverse\n\
+#deb mirror://mirrors.ubuntu.com/mirrors.txt xenial-security main restricted universe multiverse\n\n" > /etc/apt/sources.list' && \
+#    cat /etc/apt/sources.list.bkp >> /etc/apt/sources.list && \
+#    cat /etc/apt/sources.list
 
 # apt update and install global requirements
 RUN apt-get clean all && \
